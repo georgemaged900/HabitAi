@@ -23,8 +23,6 @@ Usage:
 
 import sys
 import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-
 import base64
 import json
 import os
@@ -203,6 +201,7 @@ def post_process(receipt: Receipt) -> Receipt:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
     print(f"=== PurchaseBuddy — Groq Vision Scanner: {IMAGE_PATH} ===\n")
 
     if not os.getenv("GROQ_API_KEY"):

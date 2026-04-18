@@ -14,10 +14,6 @@ Usage:
   python scan_gemma.py
 """
 
-import sys
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-
 import base64
 import json
 import os
@@ -161,6 +157,12 @@ def scan_with_gemma(image_path: str) -> Receipt:
 def post_process(receipt: Receipt) -> Receipt:
     if receipt.currency and receipt.currency.upper() in ("LE", "L.E", "L.E."):
         receipt.currency = "EGP"
+
+    # Reject items whose name is purely numeric (barcodes misread as names)
+    receipt.items = [
+        i for i in receipt.items
+        if i.name and not re.fullmatch(r'[\d\s\.\-]+', i.name.strip())
+    ]
 
     for item in receipt.items:
         if item.total_price and item.total_price > 50_000:

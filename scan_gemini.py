@@ -30,10 +30,6 @@ Usage:
   python scan_gemini.py
 """
 
-import sys
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-
 import base64
 import json
 import os
@@ -197,6 +193,12 @@ def post_process(receipt: Receipt, image_path: str) -> Receipt:
     # Fix currency: if Gemini output "LE", normalize to "EGP"
     if receipt.currency and receipt.currency.upper() in ("LE", "L.E", "L.E."):
         receipt.currency = "EGP"
+
+    # Reject items whose name is purely numeric (barcodes misread as names)
+    receipt.items = [
+        i for i in receipt.items
+        if i.name and not re.fullmatch(r'[\d\s\.\-]+', i.name.strip())
+    ]
 
     # Reject item total_prices that look like barcodes (> 50,000)
     for item in receipt.items:
