@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+*.jpeg
+*.jpg
+*.png
+*.webp
+*.gif
+node_modules/

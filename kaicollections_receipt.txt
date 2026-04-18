@@ -1,0 +1,83 @@
+Step 1: Google Vision OCR...
+
+--- Raw OCR Output ---
+ΚΑΙ
+Kai Collections
+ksafo@kacollections.com
+http://kacollections.com
+VAT ID: 721-934-245
+Served by Omar Frahat
+330
+Cream Knitted Crew 1699.00 1
+Neck Sweater (XL)
+1.00 x 1699.00 LE/Units
+Mocha Knitted Quarter 1750.00 1
+Zip Sweater (XL)
+1.00 x 1750.00 LE / Units
+Untaxed Amount
+VAT 14%
+TOTAL
+Geldea
+Customer
+3025.44
+423.56
+3449.00
+3449.00
+garg 01229411
+All Items Can Be Refunded/Exchange
+Within 14 Days Of Purchase
+Sale Items Can Only Be Exchanged
+Powered by Odoa
+Order 02523-001-0030
+30/12/2025 19:12:14
+----------------------
+
+Step 2: Ollama parsing into JSON...
+
+--- Parsed Receipt ---
+{
+  "store_name": "Kai Collections",
+  "store_address": null,
+  "date": "2025-12-30",
+  "transaction_number": "02523-001-0030",
+  "customer_name": "garg",
+  "invoice_id": null,
+  "items": [
+    {
+      "name": "Cream Knitted Crew Neck Sweater (XL)",
+      "quantity": 1.0,
+      "unit_price": 1699.0,
+      "total_price": null,
+      "category": null
+    },
+    {
+      "name": "Mocha Knitted Quarter Zip Sweater (XL)",
+      "quantity": 1.0,
+      "unit_price": 1750.0,
+      "total_price": null,
+      "category": null
+    }
+  ],
+  "subtotal": null,
+  "tax_amount": 423.56,
+  "tax_percentage": 14.0,
+  "total": 3449.0,
+  "currency": "LE",
+  "payment_method": null,
+  "return_window_days": 14,
+  "warranty_info": "All Items Can Be Refunded/Exchange Within 14 Days Of Purchase Sale Items Can Only Be Exchanged",
+  "notes": "Powered by Odoa"
+}
+
+--- Summary ---
+Store:         Kai Collections
+Date:          2025-12-30
+Total:         LE 3449.0
+Items:         2
+Transaction #: 02523-001-0030
+Customer:      garg
+Return deadline: 14 days from 2025-12-30
+
+Items:
+  - Cream Knitted Crew Neck Sweater (XL): 1.0x 
+  - Mocha Knitted Quarter Zip Sweater (XL): 1.0x 

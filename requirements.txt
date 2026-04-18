@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+requests
+python-dotenv
+pydantic
+anthropic
+ollama
+pillow
+pytesseract

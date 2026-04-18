@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(pip install:*)",
+      "Bash(winget install:*)",
+      "Bash(ollama --version)",
+      "Bash(cmd.exe /c \"ollama --version\")",
+      "Bash(cmd.exe /c \"where ollama\")",
+      "Read(//d/CS/PurchaseBuddy/HabitAi/$LOCALAPPDATA/Programs/**)",
+      "Bash(cmd.exe /c \"ollama pull llama3.2\")",
+      "Read(//c/Users/bless/AppData/Local/Programs/Ollama//**)",
+      "Read(//c/Users/bless/AppData/Local/Ollama/**)",
+      "Bash(\"/c/Users/bless/AppData/Local/Programs/Ollama/ollama.exe\" pull:*)",
+      "Bash(\"/c/Users/bless/AppData/Local/Programs/Ollama/ollama.exe\" list:*)",
+      "Bash(python main.py)",
+      "Bash(cmd.exe /c \"setx OLLAMA_MODELS D:\\\\Programs\\\\Ollama\\\\models\")",
+      "Bash(curl -L -o \"/d/Programs/Tesseract/tesseract-setup.exe\" \"https://github.com/UB-Mannheim/tesseract/releases/download/v5.4.0.20240606/tesseract-ocr-w64-setup-5.4.0.20240606.exe\")",
+      "Bash(cmd.exe /c \"D:\\\\Programs\\\\Tesseract\\\\tesseract-setup.exe /S /D=D:\\\\Programs\\\\Tesseract\\\\Tesseract-OCR\")",
+      "Bash(\"/d/Programs/Tesseract/tesseract-setup.exe\" /S /D=\"D:\\\\Programs\\\\Tesseract\\\\Tesseract-OCR\")",
+      "Bash(cmd.exe /c \"where tesseract\")",
+      "Bash(cmd.exe /c \"start /wait D:\\\\Programs\\\\Tesseract\\\\tesseract-setup.exe /S\")",
+      "Bash(cmd.exe /c \"dir \"\"C:\\\\Program Files\\\\Tesseract-OCR\"\" 2>nul\")",
+      "Bash(cmd.exe /c \"dir \"\"C:\\\\Program Files \\(x86\\)\\\\Tesseract-OCR\"\" 2>nul\")",
+      "Bash(cmd.exe /c \"where /r \"\"C:\\\\Program Files\"\" tesseract.exe\")",
+      "Bash(cmd.exe /c \"where /r D:\\\\ tesseract.exe\")",
+      "Bash(cmd.exe /c \"where /r \"\"D:\\\\Programs\"\" tesseract.exe\")",
+      "Bash(\"D:/Programs/Tesseract/tesseract.exe\" --list-langs)",
+      "Bash(curl -L -o \"/d/Programs/Tesseract/tessdata/ara.traineddata\" \"https://github.com/tesseract-ocr/tessdata/raw/main/ara.traineddata\")",
+      "Bash(cmd.exe /c \"echo %OLLAMA_MODELS%\")",
+      "Bash(taskkill //F //IM \"ollama.exe\")",
+      "Bash(taskkill //F //IM \"ollama app.exe\")",
+      "Bash(OLLAMA_MODELS=\"D:/Programs/Ollama/models\" python scan_receipt_image.py)",
+      "Bash(OLLAMA_MODELS=\"D:/Programs/Ollama/models\" \"/c/Users/bless/AppData/Local/Programs/Ollama/ollama.exe\" pull mistral)",
+      "Bash(python -c \":*)",
+      "Bash(pip show *)",
+      "WebSearch"
+    ]
+  }
+}
