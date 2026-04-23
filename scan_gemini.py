@@ -37,7 +37,7 @@ import re
 from pathlib import Path
 from dotenv import load_dotenv
 import requests
-from receipt_scanner import Receipt, ReceiptItem
+from models import Receipt
 
 load_dotenv()
 
