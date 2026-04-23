@@ -14,12 +14,8 @@ Usage:
 """
 
 import os
-import sys
-import io
 import tempfile
 from pathlib import Path
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
 from fastapi import FastAPI, File, UploadFile, Query, HTTPException
 from fastapi.responses import JSONResponse
@@ -62,7 +58,7 @@ def health():
 @app.post("/scan")
 async def scan_receipt(
     file: UploadFile = File(...),
-    model: str = Query(default="gemini", enum=["gemini", "groq", "nvidia", "gemma"]),
+    model: str = Query(default="nvidia", enum=["gemini", "groq", "nvidia", "gemma"]),
 ):
     """
     Upload a receipt image and get structured JSON back.
